@@ -1,0 +1,15 @@
+USE sqltraining
+GO
+
+-- create schemas -- 
+CREATE SCHEMA Customers AUTHORIZATION dbo 
+GO
+
+CREATE SCHEMA Orders AUTHORIZATION dbo 
+GO 
+
+CREATE SCHEMA Products AUTHORIZATION dbo 
+GO 
+
+CREATE SCHEMA LookupTables AUTHORIZATION dbo 
+GO 
