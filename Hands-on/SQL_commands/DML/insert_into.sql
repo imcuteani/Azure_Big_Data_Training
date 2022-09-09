@@ -1,13 +1,18 @@
-USE sqltraining
+USE azuretraining
 GO
 
 -- INSERT DATA Into tables -- 
 
-INSERT INTO Customers.Customer VALUES
-('Fabrikum','James','Cobb','2022-09-08')
+INSERT INTO Customers.Address VALUES
+('office','Pitt Street','Sydney','NSW', 'Sydney', 'NSW', 'Australia')
 GO
 
-INSERT INTO Customers.CustomerAddress VALUES
-('office','Pitt Street','Sydney', 'NSW','Sydney','New South Wales','Australia')
+INSERT INTO Customers.newCustomer VALUES
+('Fabrikum','Matthew','Hobert', '2022-04-05')
 GO
 
+select AddressLine1, AddressLine2  from Customers.Address
+GO 
+
+select * from Customers.newCustomer
+GO

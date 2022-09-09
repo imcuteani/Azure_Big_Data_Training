@@ -7,7 +7,7 @@ ALTER TABLE Customers.CustomerAddress RENAME COLUMN StateProvince To STATE
 
 -- for SQL Server
 
-USE sqltraining;
+USE azuretraining;
 GO
 EXEC sp_rename 'Customers.CustomerAddress', 'Address';
 

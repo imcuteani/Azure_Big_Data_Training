@@ -1,4 +1,4 @@
-USE sqltraining
+USE azuretraining
 GO
 
 -- create schemas -- 

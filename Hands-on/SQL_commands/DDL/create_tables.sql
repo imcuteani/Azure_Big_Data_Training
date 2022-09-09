@@ -71,3 +71,9 @@ CREATE TABLE Orders.OrderDetail
  StateProvince VARCHAR(50) NULL,
  Country VARCHAR(70) NULL)
  GO
+
+ -- datetime-- 0.0033
+ -- datetime2-- 100 ns
+ --smalldatetime-- 1 min
+ -- datetimeoffset-- 100 ns
+ --time
