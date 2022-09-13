@@ -9,4 +9,7 @@ GROUP BY SalesOrderID
 HAVING SUM(LineTotal) > 100000.00
 ORDER BY SalesOrderID; 
 
+select 
+
+
 
