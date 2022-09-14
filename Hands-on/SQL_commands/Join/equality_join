@@ -1,0 +1,22 @@
+-- equality join --- 
+
+-- common form of sql inner join, if the join contains an equality operator "=", then it's called equi/equality join. 
+use AdventureWorks2016;
+
+select b.ProductID, 
+b.Name, 
+b.ListPrice, 
+a.UnitPrice AS 'Sales Price'
+FROM
+Sales.SalesOrderDetail AS a 
+JOIN Production.Product AS b 
+ON a.ProductID = b.ProductID AND a.UnitPrice > b.ListPrice 
+WHERE b.ProductID = 718;
+
+select p1.BusinessEntityID, p1.ProductID 
+FROM 
+Purchasing.ProductVendor p1
+INNER JOIN Purchasing.ProductVendor p2 
+ON p1.ProductID = p2.ProductID
+WHERE p1.BusinessEntityID <> p2.BusinessEntityID
+ORDER BY p1.ProductID;
