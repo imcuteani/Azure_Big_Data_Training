@@ -70,14 +70,68 @@ GO
 use sqltraining; 
 GO
 
-create view dbo.v_CompanyByAddress
+create view dbo.v_PizzaCompany
 AS 
-select a.CompanyName, a.CompanyCity, b.WaterParkLocation 
-from dbo.PizzaCompany a LEFT JOIN dbo.WaterPark b 
-ON a.CompanyId = b.CompanyId 
+select CompanyId, CompanyName, CompanyCity 
+from dbo.PizzaCompany
+GO
+
+-- Querying data into the View 
+
+select * from dbo.v_PizzaCompany;
+GO
+
+select CompanyID from dbo.v_PizzaCompany;
+GO
+
+-- Drop the View -- 
+DROP VIEW dbo.v_PizzaCompany
+GO
+
+-- Insertion of data 
+
+-- For Inserting data into SQL Server View , the View should be created 
+-- from only one base table in order to insert data 
+--into the corresponding view 
+
+
+use sqltraining;
+GO
+
+INSERT INTO dbo.v_PizzaCompany
+(CompanyName, CompanyCity)
+VALUES('Denver', 'Colerado')
 GO
 
 
+-- ALTER SQL Server View -- 
+use sqltraining;
+GO
 
+ALTER VIEW dbo.v_PizzaCompany
+AS 
+SELECT * from dbo.PizzaCompany
+WHERE CompanyId='1'
+GO
+
+-- Query the View -- 
+
+use sqltraining;
+GO
+
+select * from dbo.v_PizzaCompany
+GO
+
+-- DROP A SQL Server View -- 
+use sqltraining;
+GO
+
+DROP VIEW dbo.v_PizzaCompany
+
+-- Update the actual SQL table for any update purpose -- 
+
+update dbo.PizzaCompany
+SET CompanyName = 'Santa Clara'
+WHERE CompanyId = 9
 
 

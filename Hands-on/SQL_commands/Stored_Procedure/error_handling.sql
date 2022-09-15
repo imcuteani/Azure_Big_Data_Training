@@ -21,11 +21,14 @@ BEGIN TRAN
  GO
 
  -- delete stored procedure 
+use sqltraining
+GO 
 
  DROP PROCEDURE dbo.aztrycatch
  GO
 
- 
+ -- Try block is used wrap the code where any error can occur
+ -- Catch block is used to handle that error 
 
  -- add try-catch block 
 
@@ -40,6 +43,8 @@ BEGIN TRAN
      INSERT INTO dbo.contoso VALUES(1)
      INSERT INTO dbo.contoso VALUES(2)
      COMMIT TRAN
+
+     select * from dbo.Contoso
      END TRY
      BEGIN Catch
      ROLLBACK TRAN
@@ -52,3 +57,8 @@ BEGIN TRAN
 
 DROP PROCEDURE dbo.aztrycatchdemo
 GO
+
+-- SET statements can help to change the settings, 
+
+-- Rollback a change happening inside the transaction of the TRY block 
+
