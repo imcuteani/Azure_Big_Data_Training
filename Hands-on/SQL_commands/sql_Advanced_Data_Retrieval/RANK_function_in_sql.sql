@@ -37,6 +37,17 @@ INNER JOIN Production.Product b
 ON a.ProductID = b.ProductID
 ORDER BY b.Name;
 
+select a.ProductID, 
+b.Name, 
+a.LocationID,
+a.Quantity, 
+DENSE_RANK() OVER(PARTITION BY a.LocationID ORDER BY a.Quantity DESC) AS 'Dense_Rank'
+FROM Production.ProductInventory a 
+INNER JOIN Production.Product b 
+ON a.ProductID = b.ProductID
+ORDER BY Dense_Rank;
+
+
 
 
 

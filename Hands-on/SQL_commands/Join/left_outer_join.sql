@@ -38,3 +38,20 @@ ORDER BY st.TerritoryID, c.LastName
 -- more than two tables can joined in one single select statement
 -- more than one join type can be used in a single select statement. 
 
+
+select a.ProductID, a.Name, b.SalesOrderID
+from Production.Product a LEFT OUTER JOIN 
+Sales.SalesOrderDetail b 
+ON a.ProductID = b.ProductID
+WHERE a.Color = 'Red'
+ORDER BY 1;
+
+select a.ProductID, 
+a.Name, 
+a.Color, 
+a.ListPrice, 
+b.StandardPrice, 
+b.OnOrderQty
+from Production.Product a LEFT OUTER JOIN 
+Purchasing.ProductVendor b 
+on a.ProductID = b.ProductID;

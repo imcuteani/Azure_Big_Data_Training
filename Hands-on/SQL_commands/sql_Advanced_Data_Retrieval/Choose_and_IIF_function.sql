@@ -42,7 +42,8 @@ use AdventureWorks2016;
 
 select StateProvinceCode, 
 CountryRegionCode, 
-IIF(TRY_PARSE(StateProvinceCode as int) between 0 AND 95, 'France','Canada') AS Country
+IIF(TRY_PARSE(StateProvinceCode as int) between 0 AND 95, 'France','Canada') 
+AS Country
 FROM Person.StateProvince
 WHERE StateProvinceCode IN (95,'AB'); 
 

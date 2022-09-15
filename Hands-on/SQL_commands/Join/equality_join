@@ -20,3 +20,10 @@ INNER JOIN Purchasing.ProductVendor p2
 ON p1.ProductID = p2.ProductID
 WHERE p1.BusinessEntityID <> p2.BusinessEntityID
 ORDER BY p1.ProductID;
+
+-- nested sub-queries -- (embedded select statements in sql)
+
+select a.ProductID, a.Name, a.ListPrice 
+from Production.Product a 
+WHERE a.ListPrice > (select AVG(b.ListPrice)from Production.Product b);
+
