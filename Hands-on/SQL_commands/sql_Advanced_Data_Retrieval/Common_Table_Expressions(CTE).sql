@@ -14,6 +14,7 @@
 -- WITH expression_name [(column names1....n)]
 --AS
 --(CTE query definition)
+-- Sample query tries to identify the following: 
 
 -- retrives the employees along with their managers across 
 -- of 25 organization units. 
@@ -21,7 +22,7 @@
 -- in CTE, we need to retrieve the anchor value 
 
 
--- Non-recursive 
+-- recursive 
 
 use AdventureWorks2016;
 

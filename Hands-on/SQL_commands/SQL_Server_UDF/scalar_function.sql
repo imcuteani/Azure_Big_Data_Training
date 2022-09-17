@@ -23,3 +23,13 @@ RETURN @ret;
 END;
 GO
 
+-- To execute this function, can use SELECT clause 
+
+-- return the current inventory quantity for products which has the 
+-- ProductModelID <>75-80 
+
+SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID) AS CurrentSupply
+FROM 
+Production.Product
+WHERE ProductModelID BETWEEN 70 and 80;
+
