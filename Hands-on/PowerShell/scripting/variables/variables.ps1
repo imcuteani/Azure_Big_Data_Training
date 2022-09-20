@@ -27,3 +27,33 @@ $i = 2147483647   # $i holds a value of type int
                     $Variable:v = 10
                 }
 
+ # error variable in PS 
+ 
+ #Error variable in PowerShell is to view the errors generated in the current PowerShell session. 
+ #We can say that the $Error variable is the container 
+ #that stores all the errors and the latest error will be displayed first. 
+
+ $ErrorView = "Categoryview"
+
+ # Profile variable in PS 
+
+ #The $PROFILE automatic variable stores the paths to the PowerShell profiles that are available in the current 
+ #session. To view a profile path, display the value of the $PROFILE variable. 
+ #You can also use the $PROFILE variable in a command to represent a path.
+
+ $Env:<variable-name>
+
+ # display the content of WinDir 
+
+ $Env:windir
+
+ # The $PROFILE automatic variable stores the paths to the PowerShell profiles that are available in the current session.
+
+ $PROFILE | Get-Member -Type NoteProperty
+
+ # Create a profile 
+
+ if (!(Test-Path -Path <profile-name>)) {
+  New-Item -ItemType File -Path <profile-name> -Force
+}
+
