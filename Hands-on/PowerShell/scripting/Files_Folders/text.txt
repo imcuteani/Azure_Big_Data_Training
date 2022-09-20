@@ -1,0 +1,1 @@
+PowerShell is a tool used for automation in real world
