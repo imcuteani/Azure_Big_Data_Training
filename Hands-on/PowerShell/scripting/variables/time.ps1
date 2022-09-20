@@ -1,3 +1,5 @@
+#datetime function
+
 dtmTime = #09/20/2022 1:57 PM#
 
 intHour = Hour(dtmTime)
