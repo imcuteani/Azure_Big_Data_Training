@@ -10,7 +10,8 @@
 
 
 # create a web page in HTML to get the date 
-ConvertTo-Html -InputObject (Get-Date)
+ConvertTo-Html -InputObject (Get-Date) | Out-File get-date.htm
+Invoke-Item get-date.htm
 
 # Create a web page to display powershell alias 
 Get-Alias | ConvertTo-Html | Out-File aliases.htm
@@ -19,6 +20,7 @@ Invoke-Item aliases.htm
 # Create a web page in html to display PowerShell events 
 
 Get-EventLog -LogName "Windows PowerShell" | ConvertTo-Html | Out-File pslog.htm
+Invoke-Item pslog.htm
 
 # Create a web page to display processes 
 
@@ -34,6 +36,7 @@ Invoke-Item proc.htm
 #The cmdlet Out-File sends the resulting HTML to the Services.htm file
 
 Get-Service | ConvertTo-Html -As LIST | Out-File services.htm
+Invoke-Item services.htm
 
 # Create a web page to display specified services
 

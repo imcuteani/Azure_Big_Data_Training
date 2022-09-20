@@ -17,6 +17,8 @@ Get-NetFirewallRule | where DisplayGroup -EQ "Remote Service Management" | Set-N
 
 # For PS Remoting in PS Core
 
+# Remoting is a process where we can execute the PS commands in a remote comuter connected to the local network
+
 get-service -ComputerName "Name of Client 1 computer"
 
 # Copy contents to remote computer

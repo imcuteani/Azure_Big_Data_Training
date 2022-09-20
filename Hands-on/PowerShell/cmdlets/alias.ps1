@@ -13,6 +13,12 @@
 #Creates an alias 
 New-Alias 
 
+New-Alias -Name gh -Value Get-Help
+
+Get-Help Get-CimInstance -Detailed
+
+gh Get-CimInstance -Detailed
+
 # Creates or changes one or more alias 
 
 Set-Alias
@@ -21,6 +27,12 @@ Set-Alias
 
 Get-Alias
 
+# cd, chdir "Set-Location" , ls, dir "Get-ChildItem"
+
 # Exports one or more alias to a file
 
 Export-Alias
+
+# Import alias - importing an alias file to powershell
+
+Import-alias 

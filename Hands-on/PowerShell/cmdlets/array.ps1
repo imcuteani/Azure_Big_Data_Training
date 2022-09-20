@@ -29,3 +29,26 @@ Write-Host ("Using for loop")
 for($i = 0; $i -le ($myList.Length - 1); $i +=1){
     $myList[$i]
 }
+
+# for-each loop using in the array
+
+Write-Host ("Using for-each loop")
+foreach ($element in $myList){
+    $element
+}
+
+# While Loop using in the array
+
+Write-Host("Using while loop")
+$i = 0
+while ($i -lt 4) {
+    $myList[$i]
+    $i++
+    
+}
+
+# Add new values in the array 
+
+Write-Host("Assign values to the array")
+$myList[1] = 100
+$myList

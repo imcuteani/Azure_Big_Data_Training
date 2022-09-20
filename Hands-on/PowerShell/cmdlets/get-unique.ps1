@@ -12,7 +12,7 @@
 
 # Type the following command in PowerShell ISE Console
 
-$list = "one","two","two","three","four","five"
+$list = "one","two","two","three","four","five", "six"
 
 #we're printing the original list of strings.
 

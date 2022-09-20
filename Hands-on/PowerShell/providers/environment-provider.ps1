@@ -8,3 +8,7 @@ Set-Location Env:
 # Back to file system drive 
 
 Set-Location E: 
+
+# Lists all env variables in current session 
+
+Get-Item -Path Env:

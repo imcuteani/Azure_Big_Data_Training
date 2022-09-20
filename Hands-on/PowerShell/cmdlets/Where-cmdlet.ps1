@@ -26,4 +26,4 @@ Get-Process | Select-Object -Property ProcessName, Id -Last 5
 
 Invoke-Item .\file.txt
 
-
+Write-Host ("This is PowerShell")
