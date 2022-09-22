@@ -3,6 +3,23 @@ $i = 2147483647   # $i holds a value of type int
 ++$i              # $i now holds a value of type double because
                   # 2147483648 is too big to fit in type int
 
+                  $a = 12 # System.Int32 
+                  $a = "Word" # System.String
+                  $a = Get-ChildItem C:\Windows # FileInfo and DirectoryInfo types
+
+                  #Type conversion
+
+                  [int] $number = 8
+                  $number = "12345"        #type conversion in PowerShell data type
+                  $number
+
+                  [string]$words = "Hello"
+                  $words = 2
+                  $words += 100  #the plus sign denotes the concatenation of strings
+                  $words
+
+
+
 
 
 #PowerShell defines the following categories of variables: static variables, instance variables, array elements,
