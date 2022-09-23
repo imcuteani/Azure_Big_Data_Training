@@ -4,7 +4,7 @@ Pre-requisites
 1. Apache Hadoop (v>=2.7.0) 
 
 # Download Apache Hadoop 
-wget https://downloads.apache.org/hive/hive-2.3.9/hive-2.3.9-bin.tar.gz 
+wget https://downloads.apache.org/hive/hive-2.3.9/apache-hive-2.3.9-bin.tar.gz 
 
 # Extract the directory 
 
