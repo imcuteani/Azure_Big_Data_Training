@@ -17,10 +17,10 @@ $ mysql
 mysql> USE db;
 mysql> CREATE TABLE employee ( 
    id INT NOT NULL PRIMARY KEY, 
-   name VARCHAR(20), 
-   deg VARCHAR(20),
-   salary INT,
-   dept VARCHAR(10));
+   name VARCHAR(70), 
+   deg VARCHAR(60),
+   salary VARCHAR(50),
+   dept VARCHAR(50));
    
   
   # Type Sqoop export command 
