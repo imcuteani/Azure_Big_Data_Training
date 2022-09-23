@@ -24,7 +24,7 @@ sudo systemctl status mysql
 
 # Login to MySQL server
 
-mysql -u root -p
+sudo mysql -u root -p
 
 # exit
 exit
