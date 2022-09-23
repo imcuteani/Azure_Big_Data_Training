@@ -16,9 +16,9 @@ sudo mysql
 
 #check mysql is configured with secure user account
 
-mysql> CREATE USER 'root'@'%' IDENTIFIED BY 'PASSWORD';
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
-mysql> FLUSH PRIVILEGES;
+mysql> CREATE USER 'hiveuser'@'%' IDENTIFIED BY 'hivepassword'; 
+mysql> GRANT all on *.* to 'hiveuser'@localhost identified by 'hivepassword';
+mysql>  flush privileges;
 
 # Check if your mySQL server is running 
 
