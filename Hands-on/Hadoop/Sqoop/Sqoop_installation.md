@@ -2,13 +2,13 @@ Step 1:
 
 #Download Sqoop from the location
 
-wget http://archive.apache.org/dist/sqoop/1.4.5/sqoop-1.4.5.tar.gz 
+wget http://archive.apache.org/dist/sqoop/1.4.5/sqoop-1.4.5.bin__hadoop-2.0.4-alpha.tar.gz  
 
 Step 2: 
 
 #Extract the folder 
 
-sudo tar -xvf sqoop-1.4.5.tar.gz
+sudo tar -xvf sqoop-1.4.5.bin__hadoop-2.0.4-alpha.tar.gz
 
 Step 3: 
 
