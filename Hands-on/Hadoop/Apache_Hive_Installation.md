@@ -67,6 +67,7 @@ wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.28/mysql-conn
 sudo mv mysql-connector-java-5.1.28.jar $HIVE_HOME/lib
 
 # Provide the Hadoop_HOME path in hive-config.sh in /bin directory 
+HADOOP_HOME=/usr/local/hadoop
 
 # Initialize the mysql as metastore db for hive from /bin directory
 /bin schemaTool -initSchema -dbType mysql 
