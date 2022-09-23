@@ -1,11 +1,11 @@
 # Create EMP_data file in HDFS 
 
-hdfs dfs -mkdir -p emp/
+hdfs dfs -mkdir -p /emp/
 
 
 # put the data from local to HDFS 
 
-hdfs dfs -put emp_data.txt emp/emp_data
+hdfs dfs -put emp_data.txt /emp/emp_data
 
 #Connect to MySQL db 
 
