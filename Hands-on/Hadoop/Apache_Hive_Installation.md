@@ -56,7 +56,7 @@ source ~/.bashrc
 
 Put the following hive-site.xml in the following conf directory 
 
-sudo vim hive-site.xml /usr/local/hive/conf
+sudo vim  /usr/local/hive/conf/hive-site.xml
 
 Get the mysql-connector.jar in the $HIVE_HOME/lib directory 
 
