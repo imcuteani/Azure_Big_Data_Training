@@ -1,7 +1,33 @@
 # Apache Hive Installation
 
 Pre-requisites 
-1. Apache Hadoop (v>=2.7.0) 
+1. Apache Hadoop (v>=2.7.0) (All Hadoop services should be running)
+2. MySql
+3. Java
+
+# Install MySQL db on Ubuntu 
+
+sudo apt-get update
+sudo apt-install mysql-server
+sudo systemctl start mysql.service
+
+#Configure & Start MySQL 
+sudo mysql
+
+#check mysql is configured with secure user account
+
+sudo mysql_secure_installation
+
+# Check if your mySQL server is running 
+
+sudo systemctl status mysql
+
+# Login to MySQL server
+
+mysql -u root -p
+
+# exit
+exit
 
 # Download Apache Hadoop 
 wget https://downloads.apache.org/hive/hive-2.3.9/apache-hive-2.3.9-bin.tar.gz 
