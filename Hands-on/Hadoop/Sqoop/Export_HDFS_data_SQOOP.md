@@ -1,10 +1,11 @@
 # Create EMP_data file in HDFS 
 
-hdfs dfs -mkdir -p /emp
+hdfs dfs -mkdir -p emp/
+
 
 # put the data from local to HDFS 
 
-hdfs dfs -put emp_data.txt /emp
+hdfs dfs -put emp_data.txt emp/emp_data
 
 #Connect to MySQL db 
 
@@ -26,7 +27,8 @@ mysql> CREATE TABLE employee (
   
   $ sqoop export \
 --connect jdbc:mysql://localhost/db \
---username root \
+--username hiveuser \
+-- password '<your_mysql_user_pwd> \
 --table employee \ 
 --export-dir /emp/emp_data
 
