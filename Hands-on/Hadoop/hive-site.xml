@@ -15,11 +15,11 @@
 
 <property>
   <name>javax.jdo.option.ConnectionUserName</name>
-  <value>root</value>
+  <value>hiveuser</value>
 </property>
 <property>
   <name>javax.jdo.option.ConnectionPassword</name>
-  <value>root</value>
+  <value>hivepassword</value>
 </property>
 
 <property>
