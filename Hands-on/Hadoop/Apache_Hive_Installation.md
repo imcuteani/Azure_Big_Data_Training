@@ -30,15 +30,16 @@ sudo mysql -u root -p
 exit
 
 # Download Apache Hadoop 
-wget https://downloads.apache.org/hive/hive-2.3.9/apache-hive-2.3.9-bin.tar.gz 
+wget https://downloads.apache.org/hive/hive-1.2.2/apache-hive-1.2.2-bin.tar.gz
+
 
 # Extract the directory 
 
-sudo tar -xvf hive-2.3.9-bin.tar.gz 
+sudo tar -xvf hive-1.2.2-bin.tar.gz 
 
 # Move the directory 
 
-sudo mv hive-2.3.9-bin.tar.gz /usr/local/hive 
+sudo mv hive-1.2.2-bin.tar.gz /usr/local/hive 
 
 # Add hive directory to the environment settings update 
 
