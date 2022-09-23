@@ -8,7 +8,7 @@ Pre-requisites
 # Install MySQL db on Ubuntu 
 
 sudo apt-get update
-sudo apt-install mysql-server
+sudo apt install mysql-server
 sudo systemctl start mysql.service
 
 #Configure & Start MySQL 
