@@ -54,6 +54,16 @@ export PATH=$PATH:HIVE_HOME/bin
 
 source ~/.bashrc
 
+Put the following hive-site.xml in the following conf directory 
+
+sudo vim hive-site.xml /usr/local/hive/conf
+
+Get the mysql-connector.jar in the $HIVE_HOME/lib directory 
+
+wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.28/mysql-connector-java-5.1.28.jar
+
+sudo mv mysql-connector-java-5.1.28.jar $HIVE_HOME/lib
+
 # Run the hive shell
 
 hive 
