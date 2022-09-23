@@ -6,7 +6,7 @@ insert into geeksforgeeks values(“Joseph”,11,2123442334,”NY”);
 
 # Create a database & table in hive 
 
-create table geeks_hive_table(name string, total_articles int, phone_no int, address string) row format delimited fields terminated by ‘,’;
+create table geeks_hive_table(name string, total_articles int, phone_no int, address string) row format delimited fields terminated by ',';
 
 # Run the following command to import data from mysql to Hive 
 
@@ -23,12 +23,17 @@ jdbc:mysql://127.0.0.1:3306/database_name \
 
 # Export data from HDFS to MySQL 
 
-create table hive_table_export(name string,company string, phone int, age int) row format delimited fields terminated by ‘,’;
+create table hive_table_export(name string,company string, phone string, age int) row format delimited fields terminated by ',';
 
 # Insert the data into the hive table
 
 insert into hive_table_export values("Ronan","Amazon",234567891,35);
 insert into hive_table_export values("Rob","Microsoft",234567892,37);
+
+# create mysql db & table 
+
+create database mysql_export;
+create table mysql_table_export(name varchar(60), company varchar(70), phone varchar(90), age varchar(40));
 
 # perform Export operation from HDFS to MySQL
 sqoop export --connect \
