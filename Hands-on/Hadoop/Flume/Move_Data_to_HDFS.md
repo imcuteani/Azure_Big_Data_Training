@@ -36,7 +36,8 @@ Step 4:
 
 execute the following command 
 
-flume-ng agent -conf ./conf/ -f conf/flume.conf -n agent1 -Dflume.root.logger=DEBUG -Xmx1000m
+flume-ng agent –conf ./conf/ -f flume.conf -n agent1 -Dflume.root.logger=DEBUG -Xmx1024m
+
 
 Step 5: 
 
