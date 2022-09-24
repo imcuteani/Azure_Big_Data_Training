@@ -41,3 +41,7 @@ flume-ng agent -conf ./conf/ -f conf/flume.conf -n agent1 -Dflume.root.logger=DE
 Step 5: 
 
 Check the output 
+
+hdfs dfs -cat /flume01
+
+
