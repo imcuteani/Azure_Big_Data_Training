@@ -6,7 +6,7 @@
 
 # Create a date to XML 
 
-Get-Date | ConvertTo-Xml
+Get-Date | ConvertTo-Xml | Out-File date.xml 
 
 # Convert processes to XML 
 
@@ -15,3 +15,4 @@ Get-Date | ConvertTo-Xml
 #The objects are expanded to a depth of three levels.
 
 ConvertTo-Xml -As "Document" -InputObject (Get-Process) -Depth 3
+

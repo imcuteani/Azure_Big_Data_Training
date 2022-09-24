@@ -7,9 +7,9 @@
 
 # Export process properties to a CSV file 
 
-Get-Process -Name WmiPrvSE | Select-Object -Property BasePriority,Id,SessionId,WorkingSet |
-  Export-Csv -Path .\WmiData.csv -NoTypeInformation
-Import-Csv -Path .\WmiData.csv
+Get-Process -Name WUDFHost | Select-Object Name,Id,CPU, SI |
+  Export-Csv -Path .\WUDFHost.csv -NoTypeInformation
+Import-Csv -Path .\WUDFHost.csv
 
 # Export processes in a comma-delimited file 
 

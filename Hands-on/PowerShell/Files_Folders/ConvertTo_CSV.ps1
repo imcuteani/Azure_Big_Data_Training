@@ -10,7 +10,7 @@
 
 # convert the process object to a CSV string
 
-Get-Process -Name 'PowerShell' | ConvertTo-Csv -NoTypeInformation
+Get-Process -Name 'PowerShell' | ConvertTo-Csv -NoTypeInformation > file.csv
 
 # Convert a DateTime object to CSV string
 
@@ -21,12 +21,15 @@ Get-Process -Name 'PowerShell' | ConvertTo-Csv -NoTypeInformation
  #The NoTypeInformation parameter removes the #TYPE information header from the CSV output.
 
 $Date = Get-Date
-ConvertTo-Csv -InputObject $Date -Delimiter ';' -NoTypeInformation
+ConvertTo-Csv -InputObject $Date -Delimiter ':' -NoTypeInformation
+
+ConvertTo-Csv 
 
 # Convert the PowerShell event log to CSV
-
+Import-Module Microsoft.PowerShell.Diagnostics
 (Get-Culture).TextInfo.ListSeparator
 Get-WinEvent -LogName 'Windows PowerShell' | ConvertTo-Csv -UseCulture -NoTypeInformation
+
 
 
 
