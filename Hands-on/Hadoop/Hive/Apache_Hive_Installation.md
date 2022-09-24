@@ -15,7 +15,6 @@ sudo systemctl start mysql.service
 sudo mysql
 
 #check mysql is configured with secure user account
-
 mysql> CREATE USER 'hiveuser'@'%' IDENTIFIED BY 'hivepassword'; 
 mysql> GRANT all on *.* to 'hiveuser'@localhost identified by 'hivepassword';
 mysql>  flush privileges;
