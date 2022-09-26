@@ -30,7 +30,7 @@ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 
 wget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.0/hadoop-2.7.0.tar.gz
 
-// Extract the foldrt
+// Extract the folder
 
 sudo tar -xvf hadoop-2.7.0.tar.gz
 
