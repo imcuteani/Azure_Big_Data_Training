@@ -94,22 +94,22 @@ Sudo cp mapred-site.xml.template mapred-site.xml
 </property>
 <property>
 <name>dfs.name.dir</name>
-<value>file://home/ani/hadoop/hdfs/namenode</value>
+<value>/home/ani/hadoop/hdfs/namenode</value>
 </property>
 <property>
 <name>dfs.data.dir</name>
-<value>file://home/ani/hadoop/hdfs/namenode/datanode</value>
+<value>/home/ani/hadoop/hdfs/namenode/datanode</value>
 </property>
 </configuration>
 // Open the Hadoop env shell & update java_home
 Export JAVA_HOME=<your_java_path>
 
 // create the local directory for namenode and datanode
-Mkdir -p /home/ani/Hadoop/hdfs/namenode
-Mkdir -p /home/ani/Hadoop/hdfs/namenode/datanode
+mkdir -p /home/ani/Hadoop/hdfs/namenode
+mkdir -p /home/ani/Hadoop/hdfs/namenode/datanode
 
 // Give permission
-Sudo chown -R ani:ani /usr/local/Hadoop
+sudo chown -R ani:ani /usr/local/Hadoop
 // format the namenode 
 Hdfs namenode -format 
 // start the Hadoop services 
@@ -136,6 +136,15 @@ Hdfs dfs -cat /user/Hadoop/output/part-r-00000
 
 Create jar file from java 
 Jar cf wc.jar input-files
+
+#stopping all hadoop services 
+
+stop-dfs.sh 
+stop-yarn.sh 
+
+# single command option
+
+stop-all.sh
 
 
 
