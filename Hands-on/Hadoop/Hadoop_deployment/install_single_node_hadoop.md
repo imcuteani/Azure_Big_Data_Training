@@ -40,7 +40,6 @@ sudo mv hadoop-2.7.0 /usr/local/hadoop
 
 
 
-
 // check localhost 
 
 Ssh localhost
@@ -51,7 +50,7 @@ Sudo vim ~/.bashrc
 
 Go to the end of the file of bashrc and apply the following config
 Export JAVA_HOME=”<your_java_path>”
-Export HADOOP_HOME=”/usr/local/Hadoop
+Export HADOOP_HOME=/usr/local/Hadoop
 Export PATH = $PATH:$HADOOP_HOME/bin
 Export PATH = $PATH:$HADOOP_HOME/sbin
 Export HADOOP_MAPRED_HOME = $HADOOP_HOME
@@ -61,11 +60,14 @@ Export YARN_HOME=$HADOOP_HOME
 Export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 Export HADOOP_OPTS=”-Djava.library.path=$HADOOP_HOME/lib”
 //Save and exit
-Source ~/.bashrc 
+source ~/.bashrc 
 Perform the following tasks
 // Move and copy the mapred-site.xml.template to mapred-site.xml 
 Cd $HADOOP_HOME/etc/Hadoop 
 Sudo cp mapred-site.xml.template mapred-site.xml 
+
+// Add the following contents 
+
 <configuration>
 <property>
 <name>mapreduce.framework.name</name>
@@ -117,7 +119,7 @@ Start-yarn.sh
 jps
 // access hadoop UI from browser 
 
-Localhost:50070
+http://Localhost:50070 - HDFS namenode
 http://localhost:8088 - YARN resource manager 
 
 // Make HDFS directories required to execute Mapreduce jobs 
