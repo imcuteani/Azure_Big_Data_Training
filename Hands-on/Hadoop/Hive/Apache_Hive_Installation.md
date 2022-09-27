@@ -73,6 +73,13 @@ HADOOP_HOME=/usr/local/hadoop
 cd $HIVE_HOME/bin
 schematool -initSchema -dbType mysql 
 
+# Create these two directories and give permission
+
+hdfs dfs -mkdir /user/hive/warehouse
+hdfs dfs -mkdir /tmp
+hdfs dfs -chmod g+w /user/hive/warehouse
+hdfs dfs -chmod g+w /tmp
+
 
 # Run the hive shell
 
