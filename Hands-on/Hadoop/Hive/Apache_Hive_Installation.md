@@ -70,7 +70,8 @@ sudo mv mysql-connector-java-5.1.28.jar $HIVE_HOME/lib
 HADOOP_HOME=/usr/local/hadoop
 
 # Initialize the mysql as metastore db for hive from /bin directory
-/bin schemaTool -initSchema -dbType mysql 
+cd $HIVE_HOME/bin
+schematool -initSchema -dbType mysql 
 
 
 # Run the hive shell
