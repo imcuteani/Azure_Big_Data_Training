@@ -124,18 +124,20 @@ http://localhost:8088 - YARN resource manager
 
 // Make HDFS directories required to execute Mapreduce jobs 
 
-Hdfs dfs -mkdir /user/Hadoop/input 
-Hdfs dfs -put data.txt /user/Hadoop/input 
+hdfs dfs -mkdir /user/Hadoop/input 
+hdfs dfs -ls /user/
+hdfs dfs -put data.txt /user/Hadoop/input 
 
 // Apply wordcount sample 
 Cd #HADOOP_HOME
-Hadoop jar share/Hadoop/mapreduce/Hadoop-mapreduce-examples-2.7.0.jar wordcount /user/Hadoop/input /user/Hadoop/output 
-Hdfs dfs -ls /user/Hadoop/output 
+hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.0.jar wordcount /user/Hadoop/input /user/Hadoop/output 
+hdfs dfs -ls /user/Hadoop/output 
 //check the contents 
-Hdfs dfs -cat /user/Hadoop/output/part-r-00000
+hdfs dfs -cat /user/Hadoop/output/part-r-00000
 
 Create jar file from java 
-Jar cf wc.jar input-files
+bin/hadoop com.sun.tools.javac.Main WordCount.java   --Compile the WordCount.java
+jar cf wc.jar WordCount*.class                       -- Create jar file   
 
 #stopping all hadoop services 
 
