@@ -13,7 +13,7 @@ sudo tar -xvf pig-0.16.0.tar.gz
 
 # Move the extracted folder to destination 
 
-sudo mv pig-0.16.0.tar.gz /usr/local/pig 
+sudo mv pig-0.16.0 /usr/local/pig 
 
 # Add the following lines in the .bashrc file for updating environment variables settings 
 
