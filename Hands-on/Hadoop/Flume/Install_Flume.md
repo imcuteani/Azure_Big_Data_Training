@@ -21,7 +21,13 @@ export PATH=$PATH:$FLUME_HOME/bin
 
 source ~/.bashrc 
 
+# Provide the JAVA_PATH in the flume-env.sh file located in $FLUME_HOME/conf directory 
+
+export JAVA_HOME=$JAVA_HOME
+
 #check the version 
 
 flume-ng version 
+
+
 
