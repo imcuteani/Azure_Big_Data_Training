@@ -31,7 +31,7 @@ sudo mysql -u hiveuser -p
 # exit
 exit
 
-# Download Apache Hadoop 
+# Download Apache Hive
 wget https://dlcdn.apache.org/hive/stable-2/apache-hive-2.3.9-bin.tar.gz  
 
 
@@ -41,7 +41,7 @@ sudo tar -xvf hive-2.3.9-bin.tar.gz
 
 # Move the directory 
 
-sudo mv hive-2.3.9-bin.tar.gz /usr/local/hive 
+sudo mv hive-2.3.9 /usr/local/hive 
 
 # Add hive directory to the environment settings update 
 
@@ -66,7 +66,7 @@ wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.28/mysql-conn
 
 sudo mv mysql-connector-java-5.1.28.jar $HIVE_HOME/lib
 
-# Provide the Hadoop_HOME path in hive-config.sh in /bin directory 
+# Provide the Hadoop_HOME path in hive-config.sh in /conf directory 
 HADOOP_HOME=/usr/local/hadoop
 
 # Initialize the mysql as metastore db for hive from /bin directory
