@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property>
+    <name>nameNode</name>
+    <value>wasbs://mycontainer@mystorageaccount.blob.core.windows.net</value>
+    </property>
+
+    <property>
+    <name>jobTracker</name>
+    <value>headnodehost:8050</value>
+    </property>
+
+    <property>
+    <name>queueName</name>
+    <value>default</value>
+    </property>
+
+    <property>
+    <name>oozie.use.system.libpath</name>
+    <value>true</value>
+    </property>
+
+    <property>
+    <name>hiveScript</name>
+    <value>wasbs://mycontainer@mystorageaccount.blob.core.windows.net/tutorials/useoozie/useooziewf.hql</value>
+    </property>
+
+    <property>
+    <name>hiveTableName</name>
+    <value>mobilecount</value>
+    </property>
+
+    <property>
+    <name>hiveDataFolder</name>
+    <value>wasbs://mycontainer@mystorageaccount.blob.core.windows.net/tutorials/useoozie/data</value>
+    </property>
+
+    <property>
+    <name>sqlDatabaseConnectionString</name>
+    <value>"jdbc:sqlserver://serverName.database.windows.net;user=sqlLogin;password=sqlPassword;database=oozietest"</value>
+    </property>
+
+    <property>
+    <name>sqlDatabaseTableName</name>
+    <value>mobiledata</value>
+    </property>
+
+    <property>
+    <name>user.name</name>
+    <value>admin</value>
+    </property>
+
+    <property>
+    <name>oozie.wf.application.path</name>
+    <value>wasbs://mycontainer@mystorageaccount.blob.core.windows.net/tutorials/useoozie</value>
+    </property>
+</configuration>
