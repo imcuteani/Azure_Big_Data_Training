@@ -21,6 +21,7 @@ mysql>  flush privileges;
 
 # Check if your mySQL server is running 
 
+sudo systemctl restart mysql
 sudo systemctl status mysql
 
 # Login to MySQL server
@@ -49,7 +50,7 @@ sudo vim ~/.bashrc
 # add the following lines 
 
 export HIVE_HOME=/usr/local/hive
-export PATH=$PATH:HIVE_HOME/bin
+export PATH=$PATH:$HIVE_HOME/bin
 
 #save the changes 
 
