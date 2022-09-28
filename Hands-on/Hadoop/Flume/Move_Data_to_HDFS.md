@@ -12,6 +12,10 @@ export JAVA_HOME=$JAVA_HOME
 
 Step 3: 
 
+Create the flume.conf file 
+
+sudo vim flume.conf
+
 Add the following configurations in the flume.conf file 
 
 agent1.sources = tail
@@ -34,15 +38,16 @@ agent1.channels.Channel-2.type = memory
 
 Step 4:
 
-execute the following command 
+execute the following command (in $FLUME_HOME/conf directory)
 
 flume-ng agent –conf ./conf/ -f flume.conf -n agent1 -Dflume.root.logger=DEBUG -Xmx1024m
 
 
 Step 5: 
 
-Check the output 
+Check the output once the file directory is created and execution is completed
 
+hdfs dfs -ls /flume01
 hdfs dfs -cat /flume01
 
 
