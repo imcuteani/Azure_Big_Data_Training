@@ -4,7 +4,7 @@
         "annotations": [],
         "type": "AzureBlobStorage",
         "typeProperties": {
-            "connectionString": "DefaultEndpointsProtocol=https;AccountName=<accountName>;AccountKey=<accountKey>;EndpointSuffix=core.windows.net"
+            "connectionString": "DefaultEndpointsProtocol=https;AccountName=cgadfstorage;AccountKey=/RNNbyUWmfGLyzuQqsE4t+ZBe8w0NIinkeEorLaVUfhS+yBL+pctLY/5XnTKsHzmjSJAvJyUQoRQ+AStu9mfhw==;EndpointSuffix=core.windows.net"
         }
     }
 }

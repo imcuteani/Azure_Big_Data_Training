@@ -1,0 +1,100 @@
+{
+    "name": "adventureworks_reuse_pipeline",
+    "properties": {
+        "activities": [
+            {
+                "name": "Get_data_Query",
+                "type": "Lookup",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "source": {
+                        "type": "AzureSqlSource",
+                        "sqlReaderQuery": {
+                            "value": "SELECT TABLE_SCHEMA, TABLE_NAME\nFROM INFORMATION_SCHEMA.TABLES \nWHERE TABLE_TYPE='BASE TABLE'\nAND TABLE_SCHEMA='SALESLT'",
+                            "type": "Expression"
+                        },
+                        "queryTimeout": "02:00:00",
+                        "partitionOption": "None"
+                    },
+                    "dataset": {
+                        "referenceName": "Azure_SQL_Generic",
+                        "type": "DatasetReference",
+                        "parameters": {
+                            "TableSchema": {
+                                "value": "@pipeline().parameters.TableSchema",
+                                "type": "Expression"
+                            },
+                            "TableName": {
+                                "value": "@pipeline().parameters.TableName",
+                                "type": "Expression"
+                            }
+                        }
+                    },
+                    "firstRowOnly": false
+                }
+            },
+            {
+                "name": "Copy_data_activity",
+                "type": "ForEach",
+                "dependsOn": [
+                    {
+                        "activity": "Get_data_Query",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "userProperties": [],
+                "typeProperties": {
+                    "items": {
+                        "value": "@activity('Get_data_Query').output.value",
+                        "type": "Expression"
+                    },
+                    "isSequential": false,
+                    "activities": [
+                        {
+                            "name": "Execute_Pipeline_Generic",
+                            "type": "ExecutePipeline",
+                            "dependsOn": [],
+                            "userProperties": [],
+                            "typeProperties": {
+                                "pipeline": {
+                                    "referenceName": "Copy_pipeline_Generic",
+                                    "type": "PipelineReference"
+                                },
+                                "waitOnCompletion": true,
+                                "parameters": {
+                                    "TableSchema": {
+                                        "value": "@item().TABLE_SCHEMA",
+                                        "type": "Expression"
+                                    },
+                                    "TableName": {
+                                        "value": "@item().TABLE_NAME",
+                                        "type": "Expression"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "parameters": {
+            "TableSchema": {
+                "type": "string"
+            },
+            "TableName": {
+                "type": "string"
+            }
+        },
+        "annotations": []
+    }
+}

@@ -1,8 +1,8 @@
-$resourceGroupName = "<your_adf_rg>";
-$ResGrp = New-AzResourceGroup $resourceGroupName -location 'East US'
+$resourceGroupName = "cgazadfdemo";
+$ResGrp = New-AzResourceGroup $resourceGroupName -location 'Central India'
 
 #Create Data Factory Name
-$dataFactoryName = "ADFQuickStartFactory";
+$dataFactoryName = "ADFDemoStartFactory";
 
 #Create ADF 
 $DataFactory = Set-AzDataFactoryV2 -ResourceGroupName $ResGrp.ResourceGroupName `
@@ -14,17 +14,17 @@ Set-Location '<your_adf_linkedservice_json_folder>'
 
 # Create Linked Service 
 Set-AzDataFactoryV2LinkedService -DataFactoryName $DataFactory.DataFactoryName `
-    -ResourceGroupName $ResGrp.ResourceGroupName -Name "AzureStorageLinkedService" `
+    -ResourceGroupName $resourceGroupName -Name "AzureStorageLinkedService" `
     -DefinitionFile ".\AzureStorageLinkedService.json"
 
  # Create ADF dataset 
  Set-AzDataFactoryV2Dataset -DataFactoryName $DataFactory.DataFactoryName `
-    -ResourceGroupName $ResGrp.ResourceGroupName -Name "InputDataset" `
-    -DefinitionFile ".\InputDataset.json"
+    -ResourceGroupName $resourceGroupName -Name "InputDataset" `
+    -DefinitionFile ".\inputDataset.json"
 
     Set-AzDataFactoryV2Dataset -DataFactoryName $DataFactory.DataFactoryName `
-    -ResourceGroupName $ResGrp.ResourceGroupName -Name "OutputDataset" `
-    -DefinitionFile ".\OutputDataset.json"
+    -ResourceGroupName $resourceGroupName -Name "OutputDataset" `
+    -DefinitionFile ".\outputdataset.json"
 
 # Create Azure Pipeline 
 
@@ -32,7 +32,7 @@ $DFPipeLine = Set-AzDataFactoryV2Pipeline `
     -DataFactoryName $DataFactory.DataFactoryName `
     -ResourceGroupName $ResGrp.ResourceGroupName `
     -Name "Adfv2QuickStartPipeline" `
-    -DefinitionFile ".\Adfv2QuickStartPipeline.json"
+    -DefinitionFile ".\pipeline.json"
 
     # Create the pipeline Run 
 
