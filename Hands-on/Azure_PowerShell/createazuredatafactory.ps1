@@ -30,7 +30,7 @@ Set-AzDataFactoryV2LinkedService -DataFactoryName $DataFactory.DataFactoryName `
 
 $DFPipeLine = Set-AzDataFactoryV2Pipeline `
     -DataFactoryName $DataFactory.DataFactoryName `
-    -ResourceGroupName $ResGrp.ResourceGroupName `
+    -ResourceGroupName $resourceGroupName `
     -Name "Adfv2QuickStartPipeline" `
     -DefinitionFile ".\pipeline.json"
 
