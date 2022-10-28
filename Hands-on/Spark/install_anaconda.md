@@ -3,6 +3,7 @@
 https://www.anaconda.com/download/#linux
 
 # Install pyspark
+conda install pyspark
 
 # Install PySpark using Conda
 conda install pyspark
