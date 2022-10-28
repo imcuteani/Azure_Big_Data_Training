@@ -4,6 +4,8 @@ https://www.anaconda.com/download/#linux
 
 wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh
 
+source ~/.bashrc -- Conda base will be activated 
+
 
 # Install pyspark
 
