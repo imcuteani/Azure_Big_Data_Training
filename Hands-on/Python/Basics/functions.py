@@ -121,6 +121,8 @@ print(format(124.55664445, "f"))
 print(format(12, "b"))
 
 #frozonset() returns an immutable frozenset object initialized with elements from the given variable
+# frozenset() creates an immutable Set object from an iterable. It's a built-in python func. 
+# As it's set object therefore, we cant have duplicte values in the frozenset.  
 
 letters = ('m', 'r', 'a', 't', 's')
 fSet = frozenset(letters)
@@ -169,3 +171,61 @@ result2 = dict(a = 1, b = 2)
 
 print(result)
 print(result2)
+
+#filter() is used to get filtered elements. This function takes two arguments, first is a function and second 
+# is iterable. This filter function returns a sequence of those elements of iterable object which returns true value. 
+
+def filterdata(x):
+    if x > 5: 
+        return x 
+# Calling function
+#
+result = filter(filterdata, (1, 2, 6))
+
+#display the result 
+print(list(result))
+
+#hash() is used to return the hash value of an object 
+
+# the hash values are integers and used to compare dictionary keys during a dictionary lookup. 
+# we can hash only the types hashable type in python
+
+# bool, int, float, long, string, Unicode, tuple, code object 
+
+result = hash(20) # integer value 
+result2 = hash(22.4) #decimal value 
+
+# display the result 
+
+print(result)
+print(result2)
+
+#slice function is used to get a slice of elements in a collection of elements. 
+
+result = slice(5) #return the slice object
+result2 = slice(0,5,3) #returns the slice object
+
+#display the result 
+
+print(result)
+print(result2)
+
+# sorted function is used to sort the elements 
+str = "pythonisamazing!"
+sorted1 = sorted(str)
+
+print(sorted1)
+
+#input() function is used to get an input from the user 
+
+val = input("Enter a value:")
+
+print("You entered:", val)
+
+# reversed() is used to return the reversed iterator of the given sequence 
+
+Tuple = ('h', 'a', 'd', 'o', 'o', 'p')
+print(list(reversed(Tuple)))
+
+Range = range(5, 10)
+print(list(reversed(Range))) 
