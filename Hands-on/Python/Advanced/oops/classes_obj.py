@@ -82,5 +82,32 @@ print(p1.person_info())
 p2 = Person('Vanessa', 'Carey', 30, 'Lisbon', 'Portugal')
 print(p2.person_info())
 
+# Method to modify class Default values 
+class Person: 
+    def __init__ (self, firstname='Mary', lastname='Reagon', age=28, country='UK', city='Cambridge'):
+        #self allows to attach parameter to the class
+        self.firstname = firstname
+        self.lastname = lastname
+        self.age = age
+        self.country = country
+        self.city = city 
+        self.skills = []
+    def person_info(self): 
+        return f'{self.firstname} {self.lastname} is {self.age} years old. She lives in {self.city},{self.country}'  
+
+    def add_empskill(self, skill):
+        self.skills.append(skill) 
+
+p1 = Person()
+print(p1.person_info())
+p1.add_empskill('python')
+p1.add_empskill('react.js')
+p1.add_empskill('mongodb')
+#p2.add_empskill('vue.js')
+p2 = Person('Vanessa', 'Carey', 30, 'Lisbon', 'Portugal')
+print(p2.person_info())
+print(p1.skills)
+print(p2.skills)
+
 
 
