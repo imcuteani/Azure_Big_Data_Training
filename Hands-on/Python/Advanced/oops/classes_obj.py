@@ -64,10 +64,23 @@ class Person:
 p = Person('Amy', 'Ronald', 25, 'England', 'Surrey')
 print(p.person_info())
 
+# object default methods 
 
+class Person: 
+    def __init__ (self, firstname='Mary', lastname='Reagon', age=28, country='UK', city='Cambridge'):
+        #self allows to attach parameter to the class
+        self.firstname = firstname
+        self.lastname = lastname
+        self.age = age
+        self.country = country
+        self.city = city 
+    def person_info(self): 
+        return f'{self.firstname} {self.lastname} is {self.age} years old. She lives in {self.city},{self.country}'    
 
-
-
+p1 = Person()
+print(p1.person_info())
+p2 = Person('Vanessa', 'Carey', 30, 'Lisbon', 'Portugal')
+print(p2.person_info())
 
 
 
