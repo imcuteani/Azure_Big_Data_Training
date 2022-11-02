@@ -9,24 +9,31 @@
 # "t" - text (default value, text mode)
 # "b" - binary mode (e.g. images)
 
-f = open('sample_file.txt')
-txt = f.read(10)
+f = open('new_text_doc.txt')
+txt = f.read(10)  # read first 10 characters
 print(type(txt))
 print(txt)
 f.close()
 
 
 # returns only the first line 
-f = open('sample_file.txt')
+f = open('new_text_doc.txt')
 txt = f.readline()     
 print(type(txt))
 print(txt)
 f.close()
 
 # returns the text line by line / list of lines 
-f = open('sample_file.txt')
-txt = f.readlines()     
-print(type(txt))
-print(txt)
+f = open('new_text_doc.txt', 'rt')
+lines = f.readlines()     
+print(type(lines))
+print(lines)
 f.close()
+
+# another way while opening files to close the files by itself. 
+
+with open('new_text_doc.txt', 'rt') as f: 
+    lines = f.read().splitlines()
+    print(type(lines))
+    print(lines)
 
