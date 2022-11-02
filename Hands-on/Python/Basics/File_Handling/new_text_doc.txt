@@ -1,2 +1,2 @@
 This is an example to show how to open a file and read.
-This is the second line of the text.This text has to be appended to the end of this file
+This is the second line of the text.This text has to be appended to the end of this fileThis text has to be appended to the end of this file

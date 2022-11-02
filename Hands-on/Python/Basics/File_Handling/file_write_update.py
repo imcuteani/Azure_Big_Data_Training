@@ -15,3 +15,12 @@ with open('new_text_doc.txt', 'a') as f:
 
 with open('writing_file_sample.txt', 'w') as f:
     f.write('This text will be written in this newly created file.')
+
+
+# Deleting file 
+
+import os 
+if os.path.exists('sample_file.txt'):
+    os.remove('sample_file.txt')
+else:
+    print('The file does not exist')    
