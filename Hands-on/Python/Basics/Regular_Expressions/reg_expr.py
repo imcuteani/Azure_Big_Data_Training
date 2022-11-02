@@ -52,3 +52,13 @@ I recommend python for the first programming language'''
 
 matches = re.findall('Python|python', txt)
 print(matches)
+
+# Split method for splitting of text using RegEx split
+
+txt = '''python is the most beautiful programming language that was ever created. 
+I recommend python for the first programming language,
+Python has vast set of libraries for functional and scientific computing'''
+
+print(re.split('\n', txt))         # \n - end of line symbol 
+
+
