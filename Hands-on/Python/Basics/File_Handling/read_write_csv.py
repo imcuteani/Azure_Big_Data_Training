@@ -29,7 +29,7 @@ rows = [ ['Nelson', 'COE', '2020', 'React JS'],
 
 # name of the csv file 
 
-filename = "employee_records_csv"
+filename = "employee_records.csv"
 
 # writing to csv file 
 

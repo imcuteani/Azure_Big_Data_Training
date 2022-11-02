@@ -1,0 +1,10 @@
+{
+    "name": "Maria",
+    "country": "UK",
+    "city": "shefields",
+    "skills": [
+        "python",
+        "aws",
+        "vue.js"
+    ]
+}
