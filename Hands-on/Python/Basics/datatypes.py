@@ -130,5 +130,5 @@ d = {(x, x + 1): x for x in range(10)}  # create a dictionary with tuple keys
 t = (5, 6) # create a tuple 
 print(type(t))
 print(d[t])   # print 5 
-print(d[(1, 2)]) 
+print(d[(1, 2)]) # print 1 (tuple key of first element of second index)
     

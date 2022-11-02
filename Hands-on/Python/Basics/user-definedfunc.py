@@ -10,6 +10,9 @@ def sign(x):
 for x in [-1, 0, 1]: 
     print(sign(x))
 
+# pass optimal arguments to python functions
+
+
 def hello(name, loud = False):
     if loud:
         print('HELLO, %s!' % name.upper())
@@ -26,5 +29,5 @@ def fib(n):  # write a fibonacci series upto n
         a, b = b, a+b 
         print()
 fib(2000)
-        
+
 
