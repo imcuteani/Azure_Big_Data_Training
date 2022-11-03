@@ -1,5 +1,4 @@
-# thread synchronization in python 
-
+# thread lock to overcome mutual exclusion/race condition in python multithreading
 import threading
 
 #global variable 
