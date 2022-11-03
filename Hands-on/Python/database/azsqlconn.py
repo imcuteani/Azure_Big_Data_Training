@@ -16,8 +16,7 @@ while row:
     print(newresult)
     row = cursor.fetchone() 
 
-
-    # Insert a row 
+# Insert a row 
 
 import pymssql
 conn = pymssql.connect(server='adventurecgdemo.database.windows.net', user='adminuser', password='admin@555', database='adventureworks')
