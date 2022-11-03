@@ -48,3 +48,7 @@ t1 = timedelta(weeks=20, days=10, hours=6, seconds=25)
 t2 = timedelta(days=8, hours=4, minutes=3, seconds=30)
 t3 = t1 - t2 
 print("t3 as time delta: ", t3)
+
+# date_string = 1 November, 2022
+# date_object = 2021-12-10 
+# t3 = date_string - date_object 

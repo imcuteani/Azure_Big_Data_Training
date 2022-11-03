@@ -23,7 +23,7 @@ import json
 person = {
     "name": "Maria",
     "country": "UK", 
-    "city": "shefields",
+    "city": "sheffields",
     "skills": ["python", "aws", 'vue.js']
 }
 
