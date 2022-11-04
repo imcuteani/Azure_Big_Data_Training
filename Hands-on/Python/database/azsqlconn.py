@@ -14,8 +14,7 @@ while row:
     print(result_3)
     newresult = (str(row[0]), "" (row[1]), " ", str(row[2]))
     print(newresult)
-    row = cursor.fetchone() 
-
+    row = cursor.fetchone()
 # Insert a row 
 
 import pymssql
